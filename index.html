@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<title>17520706</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="sheet/bootstrap.css">
+	<link rel="stylesheet" href="sheet/ionicons.min.css">
+	<link rel="stylesheet" href="sheet/mine.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
+	<script>
+		var manganh=[];
+		var dem=0;
+		function loadAnh() {
+			for(var i=0;i<7;i++)
+			{
+				manganh[i]=new Image();
+				manganh[i].scr='images/anh'+i+'.jpg';
+			}
+		}
+		function next() {
+			dem++;
+			if(dem>5)
+			{
+				dem=0;
+			}
+			document.getElementById("anh").src=manganh[dem].src;
+		}
+		function back() {
+			dem++;
+			if(dem<0)
+			{
+				dem=5;
+			}
+			document.getElementById("anh").src=manganh[dem].src;
+		}
+		function play() {
+			setInterval(function () {
+				next()
+			},900)
+		}
+
+	</script>
+</head>
+<body onload="loadAnh()">
+	<div class="menu">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h3 class="py-3">Giới thiệu bản thân !!!</span></h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" style="margin-top: 116px;">
+		<div class="row">
+			<div class="col-11 mx-auto profile">
+				<div class="py-3 px-2 px-lg-4 py-lg-5">
+					<div class="row">
+						<div class="avatarBox col-12 col-lg-5">
+							<img src="img/anh1.jpg" class="img-fluid" id="anh"/>
+							<br/>
+							<bt/>
+							<input type="button" value="Trước" onclick="back();"/>
+							<input type="button" value="Sau" onclick="next();"/>
+							<input type="button" value="Chạy" onclick="play();"/>
+						</div>
+						<div class="infoBox col-12 col-lg-6 mt-2 mt-lg-0">
+							<p class="sayHi">Xin chào</p>
+							<div class="name">
+								<p><span>Tôi là </span> Lulu</p>
+							</div>
+							<hr>
+							<div class="detailInfo">
+								<div class="row my-2">
+									<div class="col-lg-4 col-12 boldd">Họ tên</div>
+									<div class="col-lg-8 col-12 b">Dương Trần Sơn Long</div>
+								</div>
+								<div class="row my-2">
+									<div class="col-lg-4 col-12 boldd">MSSV</div>
+									<div class="col-lg-8 col-12 b">17520706</div>
+								</div>
+								<div class="row my-2">
+									<div class="col-lg-4 col-12 boldd">Trường</div>
+									<div class="col-lg-8 col-12 b">Đại học CNTT</div>
+								</div>
+								<div class="row my-2">
+									<div class="col-lg-4 col-12 boldd">Khoa</div>
+									<div class="col-lg-8 col-12 b">Hệ thống thông tin </div>
+								</div>
+								<div class="row my-2">
+									<div class="col-lg-4 col-12 boldd">Tuổi</div>
+									<div class="col-lg-8 col-12 b">21 </div>
+								</div>
+								<div class="row my-2">
+									<div class="col-lg-4 col-12 boldd">Email</div>
+									<div class="col-lg-8 col-12 b">17520706@gm.uit.edu.vn </div>
+								</div>
+								<div class="row">
+									<div class="col-lg-4 col-12 boldd">Sở thích</div>
+									<div class="col-lg-8 col-12 b">Youtuber, ngủ,... </div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-11 mx-auto bg-danger contact text-center">
+				<div class="social col-12">
+					<a href="https://facebook.com/lulu3011" target="_blank">
+						<span class="ion-social-facebook mr-4 mr-lg-5"></span>
+					</a>
+					<a href="https://www.instagram.com/sonnlongg_/" target="_blank">
+						<span class="ion-social-instagram-outline mr-4 mr-lg-5 ml-lg-"></span>
+					</a>
+					<span class="ion-social-whatsapp-outline mr-4 mr-lg-5 ml-lg-3"></span>
+					<span class="ion-social-skype-outline mr-4 mr-lg-5 ml-lg-3"></span>
+					<span class="ion-social-twitter-outline mr-4 mr-lg-5 ml-lg-3"></span>
+					<span class="ion-social-linkedin-outline ml-lg-3"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
